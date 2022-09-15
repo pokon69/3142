@@ -1,0 +1,43 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make
+      run: make -f 'make Lab2.yml'
+    - name: 1.5 Example
+      run: | 
+           echo Running program 1.5
+           echo <Output>
+           g++ -o 1.5 1.5.cpp
+           ./'Lab 2'/1.5
+           1
+           10
+    - name: 1.11 While Example
+      run : |
+            echo Running program 1.11
+            echo <Output>
+            g++ -o 1.11 1.11.cpp
+            ./'Lab 2'/1.11
+            1 
+            10
+    - name: 1.11.2 For Example
+      run : |
+            echo Running program 1.11.2
+            echo <Output>
+            g++ -o 1.11.2 1.11.2.cpp
+            ./'Lab 2'/1.11.2
+            1
+            10
+    

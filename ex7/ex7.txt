@@ -1,0 +1,65 @@
+class Sample
+{
+private:
+int x;
+double y;
+public :
+Sample(); //Constructor 1
+Sample(int); //Constructor 2
+Sample(int, int); //Constructor 3
+Sample(int, double); //Constructor 4
+};
+
+i.
+
+Sample(){
+	x= 0;
+	y= 0;
+}
+
+ii.
+Sample(int a){
+	x = a;
+	y = 0;
+}
+
+iii.
+
+Sample(int a, int b){
+	x = a;
+	y = b;
+}
+
+Sample(int a, double b){
+	x = a;
+	y = b;
+}
+
+
+
+struct Pixel{
+int C, R;
+};
+void Display(Pixel P){
+cout << "Col "<< P.C << " Row " << P.R << endl;
+}
+int main(){
+Pixel X = {40,50}, Y, Z;
+Z = X;
+X.C += 10;
+Y = Z;
+Y.C += 10;
+Y.R += 20;
+Z.C
+-
+= 15;
+Display(X);
+Display(Y);
+Display(Z);
+return 0;
+}
+
+Output:
+Col 50 Row 50
+Col 50 Row 70
+Col 25 Row 50

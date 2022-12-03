@@ -1,4 +1,5 @@
 //Phillip OKon
+// Didn't know how to implement unique and equal so it was left out
 #include <vector>
 #include <string>
 #include <fstream>
